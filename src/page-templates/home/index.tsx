@@ -1,3 +1,4 @@
+/* tslint:disable */
 import { useRef, useState } from 'react';
 import Head from 'next/head'
 import { Footer, Navbar, Heading, ShortenerAlert } from '@/components';
@@ -16,9 +17,9 @@ import {
 import axios from 'axios';
 
 const HomePage = () => {
-  const urlInput = useRef<HTMLInputElement>();
+  const urlInput = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;;
   const [urlInputIsInvalid, setUrlInputIsInvalid] = useState<boolean>(false);
-  const slugInput = useRef<HTMLInputElement>();
+  const slugInput = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;;
   const [shortingUrl, setShortingUrl] = useState<boolean>(false);
   const [generatedUrl, setGeneratedUrl] = useState<string>('');
 
